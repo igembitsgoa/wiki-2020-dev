@@ -4,15 +4,24 @@ import React from "react"
 
 import headerStyles from "./header.module.scss"
 
-const Header = ({ siteTitle }) => (
-  <header className={headerStyles.header}>
-    <div className={headerStyles.container}>
-      <h1>
-        <Link to="/" className={headerStyles.title}>
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+const Header = () => (
+  <header>
+    <nav className={["navbar navbar-expand-lg navbar-light", `${headerStyles.bgGreen}`].join(" ")}>
+      <div className="container">
+        <div class="d-flex">
+          <a className={["navbar-brand d-lg-inline-block text-white", `${headerStyles.navbarBrand}`].join(" ")} href="#">
+            iGEM BITS Goa
+          </a>
+        </div>
+        <div class="d-flex align-items-right">
+          <ul class="navbar-nav ml-auto flex-nowrap">
+            <li class="nav-item">
+              <a href="#" className={[`${headerStyles.menuItem}`, "nav-link m-2 menu-item text-uppercase text-white"].join(" ")}>Explore</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 )
 
