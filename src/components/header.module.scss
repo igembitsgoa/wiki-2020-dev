@@ -1,15 +1,180 @@
 .bgGreen {
-  background-color: #31BF55;
+  background-color: #31bf55;
 }
 
 .navbarBrand {
   font-size: 2.25rem !important;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  position: relative;
+  z-index: 200;
 }
 
 .menuItem {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1.75rem;
+}
+
+.input {
+  display: none;
+}
+
+.open {
+  background-color: #ffffff;
+  width: 24px;
+  height: 3px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+}
+
+.open:before {
+  content: "";
+  background-color: #ffffff;
+  width: 20px;
+  height: 3px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  left: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after {
+  content: "";
+  background-color: #ffffff;
+  width: 20px;
+  height: 3px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 5px;
+  left: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen {
+  /* width: 24px;
+  height: 20px; */
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  float: right;
+}
+
+/* .menuOpen:hover .open:before {
+  top: -9px;
+}
+
+.menuOpen:hover .open:after {
+  top: 5px;
+} */
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(107, 193, 86, 1);
+  z-index: 100;
+}
+
+.menu label {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-size: 100%;
+  cursor: pointer;
+  top: 32px;
+  right: 30px;
+}
+
+.menu .menuContent {
+  position: relative;
+  top: 50%;
+  font-size: 54px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -170px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  // transition: color 0.2s;
+  font-family: Trebuchet MS;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+// .menu ul li a:hover {
+//   color: #31bf55;
+// }
+
+// .menu ul li:hover {
+//   background: white;
+// }
+
+.menuEffects {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul {
+  transform: translateY(0%);
+  transition: transform 0.5s;
+  transition: opacity 0 !important;
+}
+
+.menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+.menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+}
+
+.menuToggle:checked ~ .menuOpen .open {
+  background-color: transparent;
+}
+
+.menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 200;
+}
+
+.menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color: white;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0px;
+  right: 0;
+  z-index: 200;
+}
+
+.menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-15%);
 }
