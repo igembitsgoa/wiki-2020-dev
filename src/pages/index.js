@@ -5,11 +5,12 @@ import Image from "../components/image"
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site. Deployment with Gatsby is super easy!</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+<div className="container" style={{height: 800 + 'px'}}>
+      <div className="row h-100 w-100 align-items-center text-center">
+        <div className="col">
+          <Image />
+        </div>
+      </div>
     </div>
   </Layout>
 )
