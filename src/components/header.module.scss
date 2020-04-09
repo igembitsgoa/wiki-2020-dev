@@ -1,20 +1,28 @@
+/** 
+ * Navbar 
+**/
+
 .bgGreen {
   background-color: #31bf55;
 }
 
 .navbarBrand {
   font-size: 2.25rem !important;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
   position: relative;
   z-index: 200;
 }
 
-.menuItem {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 1.75rem;
-}
+/**
+ * Fullscreen Nav Styles
+**/
+
+// .menuItem {
+//   font-family: "Raleway", sans-serif;
+//   font-weight: 500;
+//   font-size: 1.75rem;
+// }
 
 .input {
   display: none;
@@ -98,27 +106,27 @@
 
 .menu .menuContent {
   position: relative;
-  top: 50%;
-  font-size: 54px;
+  // top: 50%;
+  // font-size: 54px;
   text-align: center;
-  padding-bottom: 20px;
-  margin-top: -170px;
+  // padding-bottom: 20px;
+  // margin-top: -170px;
 }
 
 .menu ul {
   list-style: none;
-  padding: 0;
-  margin: 0 auto;
+  // padding: 0;
+  // margin: 0 auto;
 }
 
 .menu ul li a {
-  display: block;
+  // display: block;
   color: white;
-  text-decoration: none;
+  // text-decoration: none;
   // transition: color 0.2s;
-  font-family: Trebuchet MS;
-  text-transform: uppercase;
-  padding: 10px 0;
+  // font-family: Trebuchet MS;
+  // text-transform: uppercase;
+  // padding: 10px 0;
 }
 
 // .menu ul li a:hover {
@@ -142,7 +150,7 @@
 }
 
 .menuToggle:checked ~ .menuEffects {
-  opacity: 1;
+  opacity: 0.95;
   visibility: visible;
   transition: opacity 0.5s;
 }
@@ -177,4 +185,43 @@
 
 .menuToggle:not(:checked) ~ .menuEffects ul {
   transform: translateY(-15%);
+}
+
+/**
+ * Fullscreen Menu Items
+**/
+
+.navHead {
+  font-family: 'Lato', sans-serif;
+font-weight: 900;
+  font-size: 2rem;
+  color: black;
+  // margin-bottom: 15px;
+  cursor: default;
+}
+
+.navHead:after {
+  content: ".";
+}
+
+.navHead ~ hr {
+  width: 60%;
+  height: 1px;
+  margin-top: 0.5rem;
+  border-color: black;
+}
+
+.menuContent li {
+  padding-bottom: 5px;
+}
+
+.menuContent li a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.menuContent li a:hover {
+  text-decoration: none;
 }

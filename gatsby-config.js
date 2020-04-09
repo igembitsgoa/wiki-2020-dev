@@ -36,8 +36,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Montserrat`,
-            variants: [`500`, `600`]
+            family: `Lato`,
+            variants: [`500`, `700`, `900`]
           },
           {
             family: `Raleway`,
