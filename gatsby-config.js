@@ -21,8 +21,8 @@ module.exports = {
         name: `igembitsgoa`,
         short_name: `igem`,
         start_url: `/`, 
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#31bf55`,
+        theme_color: `#31bf55`,
         display: `minimal-ui`,
         // icon: ``, // This path is relative to the root of the site.
       },
