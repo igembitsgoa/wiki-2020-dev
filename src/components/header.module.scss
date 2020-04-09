@@ -200,10 +200,6 @@ font-weight: 900;
   cursor: default;
 }
 
-.navHead:after {
-  content: ".";
-}
-
 .navHead ~ hr {
   width: 60%;
   height: 1px;
