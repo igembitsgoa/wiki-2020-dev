@@ -7,7 +7,7 @@ import headerStyles from "./header.module.scss"
 const Header = () => (
   <>
     <header>
-      <nav className={["navbar navbar-expand-lg d-flex justify-content-between", `${headerStyles.bgGreen}`].join(" ")}>
+      <nav className="navbar fixed-top navbar-expand-lg d-flex justify-content-between bgGreen">
         <div class="ml-4">
           <Link className={["navbar-brand d-lg-inline-block text-white", `${headerStyles.navbarBrand}`].join(" ")}>
             iGEM BITS Goa
